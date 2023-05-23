@@ -1,0 +1,4 @@
+--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork 
+-ID:\keil\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+--pd "__UVISION_VERSION SETA 537" --pd "STM32F10X_HD SETA 1"
+--list .\listings\start.lst --xref -o ..\output\start.o --depend ..\output\start.d "start.s"

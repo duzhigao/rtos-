@@ -1,0 +1,4 @@
+Dependencies for Project 'led_c', Target 'led_c': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\main.c)(0x6396E9AF)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-ID:\keil\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="537" -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\start.s)(0x6396E9AF)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -ID:\keil\Keil\STM32F1xx_DFP\2.4.0\Device\Include--pd "__UVISION_VERSION SETA 537" --pd "STM32F10X_HD SETA 1"--list .\listings\start.lst --xref -o .\objects\start.o --depend .\objects\start.d)

@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"f103_module\startup_stm32f103xe.o"
+"f103_module\main.o"
+"f103_module\gpio.o"
+"f103_module\usart.o"
+"f103_module\stm32f1xx_it.o"
+"f103_module\stm32f1xx_hal_msp.o"
+"f103_module\stm32f1xx_hal_gpio_ex.o"
+"f103_module\stm32f1xx_hal_tim.o"
+"f103_module\stm32f1xx_hal_tim_ex.o"
+"f103_module\stm32f1xx_hal_uart.o"
+"f103_module\stm32f1xx_hal.o"
+"f103_module\stm32f1xx_hal_rcc.o"
+"f103_module\stm32f1xx_hal_rcc_ex.o"
+"f103_module\stm32f1xx_hal_gpio.o"
+"f103_module\stm32f1xx_hal_dma.o"
+"f103_module\stm32f1xx_hal_cortex.o"
+"f103_module\stm32f1xx_hal_pwr.o"
+"f103_module\stm32f1xx_hal_flash.o"
+"f103_module\stm32f1xx_hal_flash_ex.o"
+"f103_module\stm32f1xx_hal_exti.o"
+"f103_module\system_stm32f1xx.o"
+"f103_module\driver_led.o"
+"f103_module\driver_key.o"
+--library_type=microlib --strict --scatter "F103_Module\F103_Module.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "F103_Module.map" -o F103_Module\F103_Module.axf

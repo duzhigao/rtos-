@@ -1,0 +1,143 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000                 PRESERVE8
+    3 00000000                 THUMB
+    4 00000000         
+    5 00000000         
+    6 00000000         ; Vector Table Mapped to Address 0 at Reset
+    7 00000000                 AREA             RESET, DATA, READONLY
+    8 00000000                 EXPORT           __Vectors
+    9 00000000         
+   10 00000000 00000000 
+                       __Vectors
+                               DCD              0
+   11 00000004 00000000        DCD              Reset_Handler ; Reset Handler
+   12 00000008         
+   13 00000008                 AREA             |.text|, CODE, READONLY
+   14 00000000         
+   15 00000000         ; Reset handler
+   16 00000000         Reset_Handler
+                               PROC
+   17 00000000                 EXPORT           Reset_Handler             [WEAK
+]
+   18 00000000         
+   19 00000000         ;使能GPIOB
+   20 00000000 480D            LDR              R0,=0x40021018
+   21 00000002 6801            LDR              R1,[R0]
+   22 00000004 F041 0108       ORR              R1,R1,#8
+   23 00000008 6001            STR              R1,[R0]
+   24 0000000A         
+   25 0000000A         ;设置GPIOB0为输出引脚
+   26 0000000A 480C            LDR              R0,=0x40010C00
+   27 0000000C 6801            LDR              R1,[R0]
+   28 0000000E F041 0101       ORR              R1,R1,#1
+   29 00000012 6001            STR              R1,[R0]
+   30 00000014         
+   31 00000014 480A            LDR              R0,=0x40010C0C
+   32 00000016         loop
+   33 00000016         ;设置GPIOB0输出高电平
+   34 00000016 6801            LDR              R1,[R0]
+   35 00000018 F041 0101       ORR              R1,R1,#1
+   36 0000001C 6001            STR              R1,[R0]
+   37 0000001E 4A09            LDR              R2,=100000
+   38 00000020 F000 F807       BL               delay
+   39 00000024         ;设置GPIOB0输出低电平
+   40 00000024 F021 0101       BIC              R1,R1,#1
+   41 00000028 6001            STR              R1,[R0]
+   42 0000002A 4A06            LDR              R2,=100000
+   43 0000002C F000 F801       BL               delay
+   44 00000030 E7F1            B                loop
+   45 00000032         
+   46 00000032 1E52    delay   SUBS             R2,R2,#1
+   47 00000034 D1FD            BNE              delay
+   48 00000036 46F7            MOV              PC,LR
+   49 00000038         
+   50 00000038                 ENDP
+   51 00000038         
+   52 00000038                 END
+              40021018 
+              40010C00 
+              40010C0C 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+              000186A0 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\start.d -o.\objects\start.o -ID:\keil\Keil\STM32F1xx_DFP
+\2.4.0\Device\Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 
+1" --predefine="__UVISION_VERSION SETA 537" --predefine="STM32F10X_HD SETA 1" -
+-list=.\listings\start.lst start.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 7 in file start.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 10 in file start.s
+   Uses
+      At line 8 in file start.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 13 in file start.s
+   Uses
+      None
+Comment: .text unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 16 in file start.s
+   Uses
+      At line 11 in file start.s
+      At line 17 in file start.s
+
+delay 00000032
+
+Symbol: delay
+   Definitions
+      At line 46 in file start.s
+   Uses
+      At line 38 in file start.s
+      At line 43 in file start.s
+      At line 47 in file start.s
+
+loop 00000016
+
+Symbol: loop
+   Definitions
+      At line 32 in file start.s
+   Uses
+      At line 44 in file start.s
+Comment: loop used once
+4 symbols
+342 symbols in table

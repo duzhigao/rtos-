@@ -1,0 +1,184 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: zhigao du, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  D:\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\dzg\Desktop\project\2_oled\MDK-ARM\F103_Moduel.uvprojx
+Project File Date:  10/04/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil\ARM\ARMCC\Bin'
+Rebuild target '2_OLED'
+assembling startup_stm32f103xe.s...
+compiling gpio.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_msp.c...
+compiling main.c...
+..\ModuleDrivers\driver_i2c.h(23): warning:  #1295-D: Deprecated declaration I2C_GPIO_ReInit - give arg types
+  extern void I2C_GPIO_ReInit();
+..\ModuleDrivers\driver_i2c.h(24): warning:  #1295-D: Deprecated declaration I2C_Start - give arg types
+  extern void I2C_Start();
+..\ModuleDrivers\driver_i2c.h(25): warning:  #1295-D: Deprecated declaration I2C_Stop - give arg types
+  extern void I2C_Stop();
+..\ModuleDrivers\driver_i2c.h(26): warning:  #1295-D: Deprecated declaration I2C_GetAck - give arg types
+  extern int I2C_GetAck();
+..\ModuleDrivers\driver_i2c.h(27): warning:  #1295-D: Deprecated declaration I2C_ACK - give arg types
+  extern void I2C_ACK();
+..\ModuleDrivers\driver_i2c.h(28): warning:  #1295-D: Deprecated declaration I2C_NACK - give arg types
+  extern void I2C_NACK();
+..\ModuleDrivers\driver_oled.h(155): warning:  #1-D: last line of file ends without a newline
+  void OLED_Clear();
+..\ModuleDrivers\driver_oled.h(155): warning:  #1295-D: Deprecated declaration OLED_Clear - give arg types
+  void OLED_Clear();
+../Core/Src/main.c(96): warning:  #223-D: function "OLED_Init" declared implicitly
+    OLED_Init();
+../Core/Src/main.c: 9 warnings, 0 errors
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_tim.c...
+compiling usart.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_uart.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling system_stm32f1xx.c...
+compiling driver_i2c.c...
+..\ModuleDrivers\driver_i2c.h(23): warning:  #1295-D: Deprecated declaration I2C_GPIO_ReInit - give arg types
+  extern void I2C_GPIO_ReInit();
+..\ModuleDrivers\driver_i2c.h(24): warning:  #1295-D: Deprecated declaration I2C_Start - give arg types
+  extern void I2C_Start();
+..\ModuleDrivers\driver_i2c.h(25): warning:  #1295-D: Deprecated declaration I2C_Stop - give arg types
+  extern void I2C_Stop();
+..\ModuleDrivers\driver_i2c.h(26): warning:  #1295-D: Deprecated declaration I2C_GetAck - give arg types
+  extern int I2C_GetAck();
+..\ModuleDrivers\driver_i2c.h(27): warning:  #1295-D: Deprecated declaration I2C_ACK - give arg types
+  extern void I2C_ACK();
+..\ModuleDrivers\driver_i2c.h(28): warning:  #1295-D: Deprecated declaration I2C_NACK - give arg types
+  extern void I2C_NACK();
+..\ModuleDrivers\driver_i2c.c(69): warning:  #188-D: enumerated type mixed with another type
+      SCL_H;
+..\ModuleDrivers\driver_i2c.c(70): warning:  #188-D: enumerated type mixed with another type
+      SDA_H;
+..\ModuleDrivers\driver_i2c.c(72): warning:  #188-D: enumerated type mixed with another type
+      SDA_L;
+..\ModuleDrivers\driver_i2c.c(85): warning:  #188-D: enumerated type mixed with another type
+      SDA_L;
+..\ModuleDrivers\driver_i2c.c(86): warning:  #188-D: enumerated type mixed with another type
+      SCL_H;
+..\ModuleDrivers\driver_i2c.c(88): warning:  #188-D: enumerated type mixed with another type
+      SDA_H;
+..\ModuleDrivers\driver_i2c.c(102): warning:  #188-D: enumerated type mixed with another type
+      SCL_L;
+..\ModuleDrivers\driver_i2c.c(103): warning:  #188-D: enumerated type mixed with another type
+      SDA_H;
+..\ModuleDrivers\driver_i2c.c(105): warning:  #188-D: enumerated type mixed with another type
+      SCL_H;
+..\ModuleDrivers\driver_i2c.c(111): warning:  #188-D: enumerated type mixed with another type
+              SCL_L;
+..\ModuleDrivers\driver_i2c.c(116): warning:  #188-D: enumerated type mixed with another type
+      SCL_L;
+..\ModuleDrivers\driver_i2c.c(129): warning:  #188-D: enumerated type mixed with another type
+      SCL_L;
+..\ModuleDrivers\driver_i2c.c(130): warning:  #188-D: enumerated type mixed with another type
+      SDA_L;
+..\ModuleDrivers\driver_i2c.c(132): warning:  #188-D: enumerated type mixed with another type
+      SCL_H;
+..\ModuleDrivers\driver_i2c.c(145): warning:  #188-D: enumerated type mixed with another type
+      SCL_L;
+..\ModuleDrivers\driver_i2c.c(146): warning:  #188-D: enumerated type mixed with another type
+      SDA_H;
+..\ModuleDrivers\driver_i2c.c(148): warning:  #188-D: enumerated type mixed with another type
+      SCL_H;
+..\ModuleDrivers\driver_i2c.c(164): warning:  #188-D: enumerated type mixed with another type
+          SCL_L;
+..\ModuleDrivers\driver_i2c.c(168): warning:  #188-D: enumerated type mixed with another type
+              SDA_H;
+..\ModuleDrivers\driver_i2c.c(172): warning:  #188-D: enumerated type mixed with another type
+              SDA_L;
+..\ModuleDrivers\driver_i2c.c(175): warning:  #188-D: enumerated type mixed with another type
+          SCL_H;
+..\ModuleDrivers\driver_i2c.c(192): warning:  #188-D: enumerated type mixed with another type
+      SDA_H;
+..\ModuleDrivers\driver_i2c.c(195): warning:  #188-D: enumerated type mixed with another type
+          SCL_L;
+..\ModuleDrivers\driver_i2c.c(197): warning:  #188-D: enumerated type mixed with another type
+          SCL_H;
+..\ModuleDrivers\driver_i2c.c: 30 warnings, 0 errors
+compiling stm32f1xx_hal_exti.c...
+compiling driver_oled.c...
+..\ModuleDrivers\driver_oled.h(155): warning:  #1-D: last line of file ends without a newline
+  void OLED_Clear();
+..\ModuleDrivers\driver_oled.h(155): warning:  #1295-D: Deprecated declaration OLED_Clear - give arg types
+  void OLED_Clear();
+..\ModuleDrivers\driver_i2c.h(23): warning:  #1295-D: Deprecated declaration I2C_GPIO_ReInit - give arg types
+  extern void I2C_GPIO_ReInit();
+..\ModuleDrivers\driver_i2c.h(24): warning:  #1295-D: Deprecated declaration I2C_Start - give arg types
+  extern void I2C_Start();
+..\ModuleDrivers\driver_i2c.h(25): warning:  #1295-D: Deprecated declaration I2C_Stop - give arg types
+  extern void I2C_Stop();
+..\ModuleDrivers\driver_i2c.h(26): warning:  #1295-D: Deprecated declaration I2C_GetAck - give arg types
+  extern int I2C_GetAck();
+..\ModuleDrivers\driver_i2c.h(27): warning:  #1295-D: Deprecated declaration I2C_ACK - give arg types
+  extern void I2C_ACK();
+..\ModuleDrivers\driver_i2c.h(28): warning:  #1295-D: Deprecated declaration I2C_NACK - give arg types
+  extern void I2C_NACK();
+..\ModuleDrivers\driver_oled.c: 8 warnings, 0 errors
+compiling ascii_font.c...
+..\ModuleDrivers\ascii_font.c(2): warning:  #177-D: variable "ascii_font"  was declared but never referenced
+  static const uint8_t ascii_font[128][16] ={                                              
+..\ModuleDrivers\ascii_font.c: 1 warning, 0 errors
+linking...
+Program Size: Code=7672 RO-data=2408 RW-data=20 ZI-data=1164  
+FromELF: creating hex file...
+"F103_Moduel\F103_Moduel.axf" - 0 Error(s), 48 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_2_OLED
+  D:/keil/ARM/CMSIS/5.8.0/CMSIS/Core/Include
+  D:/keil/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:14
+</pre>
+</body>
+</html>

@@ -1,0 +1,4 @@
+--gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I ..\system\regdef -I ..\system\sys -I ..\system\typedef -I ..\hardware\uart -I ..\mystring
+-ID:\keil\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+-D__UVISION_VERSION="537" -DSTM32F10X_HD
+-o ..\output\uart.o --omf_browse ..\output\uart.crf --depend ..\output\uart.d "..\hardware\uart\uart.c"
